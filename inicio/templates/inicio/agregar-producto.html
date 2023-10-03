@@ -1,0 +1,33 @@
+{% extends "shares/base.html" %}
+<!-- Title-->
+{% block title %}
+Agregar Producto
+{% endblock title %}
+
+<!-- Header-->
+{% block h1_header %}
+Agregar Producto
+{% endblock h1_header %}
+
+
+<!-- Description-->
+{% block h2_header %}
+Agregue el producto que desea publicar e indique el precio
+<form action="" method="POST">
+    {% csrf_token %} 
+    <table>
+        {{formulario}}
+    </table>
+
+    <input type="submit" value="Agregar Producto" >
+</form>
+
+{% endblock h2_header %}
+
+
+
+
+
+
+
+

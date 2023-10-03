@@ -1,0 +1,42 @@
+{% extends "shares/base.html" %}
+<!-- Title-->
+{% block title %}
+Buscar Producto
+{% endblock title %}
+
+<!-- Header-->
+{% block h1_header %}
+Buscar Producto
+{% endblock h1_header %}
+
+
+<!-- Description-->
+{% block h2_header %}
+Puede realizar la busqueda de productos por nombre.
+
+<form action="">
+    
+    <table>
+        {{formulario}}
+    </table>
+
+    <input type="submit" value="Buscar Producto" >
+</form>
+
+
+<ul>
+    {% for Producto in producto_encontrado %}
+    <li>Producto: {{Producto.Producto}} </li>
+    <p>Descripcion {{Producto.Descripcion}}
+    <p>Precio: ${{Producto.Precio}}</p>
+    <p></p>
+    <p></p>
+    
+    {% endfor %}
+</ul>
+
+{% endblock h2_header %}
+
+
+
+
